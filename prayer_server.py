@@ -1,99 +1,179 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from datetime import date, datetime
 import json
+import os
 
-# Simple fallback prayer calculation or mock data
-class SimplePrayerAPI:
+# Import pyIslam library for accurate prayer time calculations
+from pyIslam.praytimes import PrayerConf, Prayer, LIST_FAJR_ISHA_METHODS
+from pyIslam.hijri import HijriDate
+from pyIslam.qiblah import Qiblah
+
+class PrayerAPI:
     """
-    Simplified Prayer API with mock data for Bahrain.
-    This is a temporary implementation until pyIslam is properly installed.
+    Prayer API using pyIslam library for accurate calculations.
+    Configuration:
+    - Timezone: GMT+3
+    - Fajr/Isha Method: 4 (Umm Al-Qura University, Makkah)
+    - Asr Madhab: 1 (Shafii, Maliki, Hambali)
     """
     
-    def __init__(self):
-        self.longitude = 50.20833
-        self.latitude = 26.27944
-        self.timezone = 3
+    def __init__(self, longitude=50.20833, latitude=26.27944):
+        self.longitude = longitude
+        self.latitude = latitude
+        self.timezone = 3  # GMT+3
+        self.fajr_isha_method = 4  # Umm Al-Qura University, Makkah
+        self.asr_fiqh = 1  # Shafii, Maliki, Hambali
         
-        # Mock prayer times for Bahrain (approximate)
-        self.mock_times = {
-            'fajr': '04:18',
-            'sherook': '05:37',
-            'dohr': '11:26',
-            'asr': '14:45',
-            'maghreb': '17:14',
-            'ishaa': '18:44',
-            'midnight': '23:30',
-            'second_third_of_night': '01:15',
-            'last_third_of_night': '02:45',
-            'qiblah_direction': '261.5°'
+        # Create prayer configuration
+        self.pconf = PrayerConf(
+            self.longitude,
+            self.latitude,
+            self.timezone,
+            self.fajr_isha_method,
+            self.asr_fiqh
+        )
+        
+        # Create prayer times object for today
+        self.pt = Prayer(self.pconf, date.today())
+        
+        # Create Qiblah object
+        self.qiblah = Qiblah(self.pconf)
+    
+    def get_all_prayer_times(self):
+        """Get all prayer times for today."""
+        return {
+            'fajr': str(self.pt.fajr_time()),
+            'sherook': str(self.pt.sherook_time()),
+            'dohr': str(self.pt.dohr_time()),
+            'asr': str(self.pt.asr_time()),
+            'maghreb': str(self.pt.maghreb_time()),
+            'ishaa': str(self.pt.ishaa_time()),
+            'midnight': str(self.pt.midnight()),
+            'second_third_of_night': str(self.pt.second_third_of_night()),
+            'last_third_of_night': str(self.pt.last_third_of_night()),
+            'qiblah_direction': self.qiblah.sixty()
         }
     
     def get_fajr_time(self):
-        return self.mock_times['fajr']
+        return str(self.pt.fajr_time())
     
     def get_sherook_time(self):
-        return self.mock_times['sherook']
+        return str(self.pt.sherook_time())
     
     def get_dohr_time(self):
-        return self.mock_times['dohr']
+        return str(self.pt.dohr_time())
     
     def get_asr_time(self):
-        return self.mock_times['asr']
+        return str(self.pt.asr_time())
     
     def get_maghreb_time(self):
-        return self.mock_times['maghreb']
+        return str(self.pt.maghreb_time())
     
     def get_ishaa_time(self):
-        return self.mock_times['ishaa']
+        return str(self.pt.ishaa_time())
     
     def get_midnight_time(self):
-        return self.mock_times['midnight']
+        return str(self.pt.midnight())
     
     def get_second_third_of_night(self):
-        return self.mock_times['second_third_of_night']
+        return str(self.pt.second_third_of_night())
     
     def get_last_third_of_night(self):
-        return self.mock_times['last_third_of_night']
+        return str(self.pt.last_third_of_night())
     
     def get_qiblah_direction(self):
-        return self.mock_times['qiblah_direction']
-    
-    def get_all_prayer_times(self):
-        return self.mock_times
+        return self.qiblah.sixty()
     
     def get_hijri_date(self):
-        # Simple Hijri date approximation
-        gregorian_date = date.today()
-        return f"{gregorian_date.day} Rabi' al-awwal 1447"  # Mock Hijri date
+        """Get accurate Hijri date."""
+        hijri = HijriDate.today()
+        return hijri.format(2)  # Format: "Day MonthName Year"
     
     def get_location_info(self):
+        """Get location and calculation method information."""
+        method_info = LIST_FAJR_ISHA_METHODS[self.fajr_isha_method - 1]
+        asr_madhab_names = ("Shafii, Maliki, Hambali", "Hanafi")
+        
         return {
             'longitude': self.longitude,
             'latitude': self.latitude,
-            'timezone': 'GMT+3',
-            'fajr_isha_method': 'Islamic Society of North America',
-            'asr_madhab': 'Shafii, Maliki, Hambali'
+            'timezone': f'GMT+{self.timezone}',
+            'fajr_isha_method': method_info.organizations[0],
+            'asr_madhab': asr_madhab_names[self.asr_fiqh - 1]
         }
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-# Initialize prayer API with Bahrain configuration
-prayer_api = SimplePrayerAPI()
+# Load locations from JSON file
+def load_locations():
+    try:
+        locations_file = os.path.join(os.path.dirname(__file__), 'locations.json')
+        with open(locations_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Error loading locations: {e}")
+        return []
+
+LOCATIONS = load_locations()
+
+# Initialize prayer API with Bahrain configuration (default)
+prayer_api = PrayerAPI(longitude=50.20833, latitude=26.27944)
+
+@app.route('/api/locations', methods=['GET'])
+def get_locations():
+    """Get all available locations."""
+    return jsonify({
+        'locations': LOCATIONS,
+        'count': len(LOCATIONS)
+    })
 
 @app.route('/api/prayer-times', methods=['GET'])
 def get_prayer_times():
-    """Get all prayer times for today."""
+    """Get all prayer times for today. Supports ?city=CityName or ?latitude=X&longitude=Y parameters."""
     try:
+        # Get location parameters from query string
+        city = request.args.get('city')
+        latitude = request.args.get('latitude', type=float)
+        longitude = request.args.get('longitude', type=float)
+        
+        # Determine location to use
+        location_name = 'MANAMA, BH'  # Default
+        lat = 26.27944  # Default Bahrain
+        lon = 50.20833
+        
+        if city:
+            # Find city in locations
+            location = next((loc for loc in LOCATIONS if loc['city'].lower() == city.lower()), None)
+            if location:
+                # Handle nested coordinates structure
+                if 'coordinates' in location:
+                    lat = location['coordinates']['latitude']
+                    lon = location['coordinates']['longitude']
+                else:
+                    lat = location['latitude']
+                    lon = location['longitude']
+                location_name = f"{location['city'].upper()}, SA"
+            else:
+                return jsonify({'error': f'City "{city}" not found in locations'}), 404
+        elif latitude is not None and longitude is not None:
+            # Use provided coordinates
+            lat = latitude
+            lon = longitude
+            location_name = f"LAT: {lat:.4f}, LON: {lon:.4f}"
+        
+        # Create prayer API instance for this location
+        location_prayer_api = PrayerAPI(longitude=lon, latitude=lat)
+        
         # Get all prayer times
-        times = prayer_api.get_all_prayer_times()
+        times = location_prayer_api.get_all_prayer_times()
         
         # Get location info
-        location_info = prayer_api.get_location_info()
+        location_info = location_prayer_api.get_location_info()
         
         # Get Hijri date
-        hijri_date = prayer_api.get_hijri_date()
+        hijri_date = location_prayer_api.get_hijri_date()
         
         # Format response to match frontend expectations
         response = {
@@ -105,8 +185,8 @@ def get_prayer_times():
                 {'name': 'Maghrib', 'nameArabic': 'المغرب', 'time': times['maghreb']},
                 {'name': 'Isha', 'nameArabic': 'العشاء', 'time': times['ishaa']},
             ],
-            'location': 'MANAMA, BH',  # Bahrain location
-            'hijriDate': hijri_date.format(2),
+            'location': location_name,
+            'hijriDate': hijri_date,
             'gregorianDate': date.today().strftime('%Y-%m-%d'),
             'additionalTimes': {
                 'midnight': times['midnight'],
@@ -181,10 +261,12 @@ def health_check():
 if __name__ == '__main__':
     print("Starting Prayer API Server...")
     print("Available endpoints:")
-    print("- GET /api/prayer-times - Get all prayer times")
+    print("- GET /api/locations - Get all available locations")
+    print("- GET /api/prayer-times - Get all prayer times (optional: ?city=CityName or ?latitude=X&longitude=Y)")
     print("- GET /api/prayer-times/<prayer_name> - Get specific prayer time")
     print("- GET /api/location-info - Get location information")
     print("- GET /api/qiblah - Get Qiblah direction")
     print("- GET /api/health - Health check")
+    print(f"\nLoaded {len(LOCATIONS)} locations from locations.json")
     
     app.run(debug=True, host='0.0.0.0', port=5001)

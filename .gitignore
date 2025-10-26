@@ -1,0 +1,39 @@
+# Trash directory
+trash/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.log
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node modules (for dashboard)
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Nginx
+logs/
+*.pid

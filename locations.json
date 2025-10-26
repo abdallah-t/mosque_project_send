@@ -1,0 +1,828 @@
+[
+    {
+        "city": "Zulfi",
+        "coordinates": {
+            "latitude": 26.3,
+            "longitude": 44.8
+        }
+    },
+    {
+        "city": "Yanbu",
+        "coordinates": {
+            "latitude": 24.08,
+            "longitude": 38.0
+        }
+    },
+    {
+        "city": "Wadi Al-Dawasir",
+        "coordinates": {
+            "latitude": 20.48,
+            "longitude": 45.18
+        }
+    },
+    {
+        "city": "Uyun AlJiwa",
+        "coordinates": {
+            "latitude": 26.45,
+            "longitude": 43.68
+        }
+    },
+    {
+        "city": "Uyayna",
+        "coordinates": {
+            "latitude": 24.89,
+            "longitude": 46.40
+        }
+    },
+    {
+        "city": "Uqair",
+        "coordinates": {
+            "latitude": 25.59,
+            "longitude": 50.21
+        }
+    },
+    {
+        "city": "Unaizah",
+        "coordinates": {
+            "latitude": 26.09,
+            "longitude": 44.02
+        }
+    },
+    {
+        "city": "Umluj",
+        "coordinates": {
+            "latitude": 25.06,
+            "longitude": 37.26
+        }
+    },
+    {
+        "city": "Um Al-Sahek",
+        "coordinates": {
+            "latitude": 26.79,
+            "longitude": 49.95
+        }
+    },
+    {
+        "city": "Udhailiyah",
+        "coordinates": {
+            "latitude": 25.20,
+            "longitude": 48.20
+        }
+    },
+    {
+        "city": "Turaif",
+        "coordinates": {
+            "latitude": 31.68,
+            "longitude": 38.65
+        }
+    },
+    {
+        "city": "Thuwal",
+        "coordinates": {
+            "latitude": 22.30,
+            "longitude": 39.09
+        }
+    },
+    {
+        "city": "Thuqbah",
+        "coordinates": {
+            "latitude": 26.24,
+            "longitude": 50.17
+        }
+    },
+    {
+        "city": "Thadiq",
+        "coordinates": {
+            "latitude": 25.04,
+            "longitude": 45.92
+        }
+    },
+    {
+        "city": "Tayma",
+        "coordinates": {
+            "latitude": 27.62,
+            "longitude": 38.54
+        }
+    },
+    {
+        "city": "Tarout",
+        "coordinates": {
+            "latitude": 26.58,
+            "longitude": 50.05
+        }
+    },
+    {
+        "city": "Tanomah",
+        "coordinates": {
+            "latitude": 18.96,
+            "longitude": 42.06
+        }
+    },
+    {
+        "city": "Taif",
+        "coordinates": {
+            "latitude": 21.27,
+            "longitude": 40.41
+        }
+    },
+    {
+        "city": "Tabuk",
+        "coordinates": {
+            "latitude": 28.38,
+            "longitude": 36.58
+        }
+    },
+    {
+        "city": "Tabarjal",
+        "coordinates": {
+            "latitude": 30.29,
+            "longitude": 39.85
+        }
+    },
+    {
+        "city": "Shaybah",
+        "coordinates": {
+            "latitude": 22.51,
+            "longitude": 50.70
+        }
+    },
+    {
+        "city": "Sharurah",
+        "coordinates": {
+            "latitude": 17.47,
+            "longitude": 47.12
+        }
+    },
+    {
+        "city": "Shaqra",
+        "coordinates": {
+            "latitude": 25.23,
+            "longitude": 45.24
+        }
+    },
+    {
+        "city": "Sarat Abidah",
+        "coordinates": {
+            "latitude": 18.0,
+            "longitude": 43.08
+        }
+    },
+    {
+        "city": "Sakakah",
+        "coordinates": {
+            "latitude": 29.97,
+            "longitude": 40.20
+        }
+    },
+    {
+        "city": "Saihat",
+        "coordinates": {
+            "latitude": 26.49,
+            "longitude": 50.06
+        }
+    },
+    {
+        "city": "Safwa city",
+        "coordinates": {
+            "latitude": 26.65,
+            "longitude": 49.95
+        }
+    },
+    {
+        "city": "Sabya",
+        "coordinates": {
+            "latitude": 17.15,
+            "longitude": 42.63
+        }
+    },
+    {
+        "city": "Sabt Al Alaya",
+        "coordinates": {
+            "latitude": 19.86,
+            "longitude": 42.18
+        }
+    },
+    {
+        "city": "Rumailah",
+        "coordinates": {
+            "latitude": 25.45,
+            "longitude": 49.70
+        }
+    },
+    {
+        "city": "Rumah",
+        "coordinates": {
+            "latitude": 25.40,
+            "longitude": 47.01
+        }
+    },
+    {
+        "city": "Riyadh Al-Khabra",
+        "coordinates": {
+            "latitude": 25.96,
+            "longitude": 43.60
+        }
+    },
+    {
+        "city": "Riyadh",
+        "coordinates": {
+            "latitude": 24.71,
+            "longitude": 46.67
+        }
+    },
+    {
+        "city": "Ras Tanura",
+        "coordinates": {
+            "latitude": 26.65,
+            "longitude": 50.15
+        }
+    },
+    {
+        "city": "Ranyah",
+        "coordinates": {
+            "latitude": 21.32,
+            "longitude": 42.84
+        }
+    },
+    {
+        "city": "Raghbah",
+        "coordinates": {
+            "latitude": 25.10,
+            "longitude": 46.06
+        }
+    },
+    {
+        "city": "Rafha",
+        "coordinates": {
+            "latitude": 29.62,
+            "longitude": 43.50
+        }
+    },
+    {
+        "city": "Rabigh",
+        "coordinates": {
+            "latitude": 22.80,
+            "longitude": 39.02
+        }
+    },
+    {
+        "city": "Qurayyat",
+        "coordinates": {
+            "latitude": 31.33,
+            "longitude": 37.33
+        }
+    },
+    {
+        "city": "Qatif",
+        "coordinates": {
+            "latitude": 26.55,
+            "longitude": 50.00
+        }
+    },
+    {
+        "city": "Qaisumah",
+        "coordinates": {
+            "latitude": 28.32,
+            "longitude": 46.13
+        }
+    },
+    {
+        "city": "Qadeimah",
+        "coordinates": {
+            "latitude": 22.37,
+            "longitude": 39.10
+        }
+    },
+    {
+        "city": "Neom",
+        "coordinates": {
+            "latitude": 28.00,
+            "longitude": 35.30
+        }
+    },
+    {
+        "city": "Najran",
+        "coordinates": {
+            "latitude": 17.58,
+            "longitude": 44.22
+        }
+    },
+    {
+        "city": "Muzahmiyya",
+        "coordinates": {
+            "latitude": 24.03,
+            "longitude": 46.10
+        }
+    },
+    {
+        "city": "Medina",
+        "coordinates": {
+            "latitude": 24.52,
+            "longitude": 39.57
+        }
+    },
+    {
+        "city": "Mecca",
+        "coordinates": {
+            "latitude": 21.42,
+            "longitude": 39.82
+        }
+    },
+    {
+        "city": "Mastoorah",
+        "coordinates": {
+            "latitude": 23.31,
+            "longitude": 38.64
+        }
+    },
+    {
+        "city": "Lihyan",
+        "coordinates": {
+            "latitude": 26.83,
+            "longitude": 37.95
+        }
+    },
+    {
+        "city": "Layla",
+        "coordinates": {
+            "latitude": 22.76,
+            "longitude": 46.70
+        }
+    },
+    {
+        "city": "Knowledge Economic City, Medina",
+        "coordinates": {
+            "latitude": 24.47,
+            "longitude": 39.53
+        }
+    },
+    {
+        "city": "King Khalid Military City",
+        "coordinates": {
+            "latitude": 27.50,
+            "longitude": 45.54
+        }
+    },
+    {
+        "city": "King Abdullah Economic City",
+        "coordinates": {
+            "latitude": 22.37,
+            "longitude": 39.10
+        }
+    },
+    {
+        "city": "Khobar",
+        "coordinates": {
+            "latitude": 26.21,
+            "longitude": 50.19
+        }
+    },
+    {
+        "city": "Khaybar",
+        "coordinates": {
+            "latitude": 25.70,
+            "longitude": 39.29
+        }
+    },
+    {
+        "city": "Khamis Mushait",
+        "coordinates": {
+            "latitude": 18.31,
+            "longitude": 42.73
+        }
+    },
+    {
+        "city": "Khafji",
+        "coordinates": {
+            "latitude": 28.42,
+            "longitude": 48.50
+        }
+    },
+    {
+        "city": "Jubail",
+        "coordinates": {
+            "latitude": 27.0,
+            "longitude": 49.66
+        }
+    },
+    {
+        "city": "Jizan",
+        "coordinates": {
+            "latitude": 16.89,
+            "longitude": 42.56
+        }
+    },
+    {
+        "city": "Jeddah",
+        "coordinates": {
+            "latitude": 21.48,
+            "longitude": 39.19
+        }
+    },
+    {
+        "city": "Jazan Economic City",
+        "coordinates": {
+            "latitude": 16.99,
+            "longitude": 42.45
+        }
+    },
+    {
+        "city": "Jalajil",
+        "coordinates": {
+            "latitude": 25.93,
+            "longitude": 45.52
+        }
+    },
+    {
+        "city": "Jabal Umm al Ru'us",
+        "coordinates": {
+            "latitude": 26.68,
+            "longitude": 48.01
+        }
+    },
+    {
+        "city": "Irqah",
+        "coordinates": {
+            "latitude": 24.69,
+            "longitude": 46.57
+        }
+    },
+    {
+        "city": "Huraymila",
+        "coordinates": {
+            "latitude": 25.02,
+            "longitude": 45.90
+        }
+    },
+    {
+        "city": "Hotat Bani Tamim",
+        "coordinates": {
+            "latitude": 23.36,
+            "longitude": 46.85
+        }
+    },
+    {
+        "city": "Hofuf",
+        "coordinates": {
+            "latitude": 25.37,
+            "longitude": 49.57
+        }
+    },
+    {
+        "city": "Al-Mubarraz",
+        "coordinates": {
+            "latitude": 25.41,
+            "longitude": 49.55
+        }
+    },
+    {
+        "city": "Hautat Sudair",
+        "coordinates": {
+            "latitude": 25.40,
+            "longitude": 45.71
+        }
+    },
+    {
+        "city": "Harmah",
+        "coordinates": {
+            "latitude": 25.96,
+            "longitude": 45.30
+        }
+    },
+    {
+        "city": "Haql",
+        "coordinates": {
+            "latitude": 29.35,
+            "longitude": 34.93
+        }
+    },
+    {
+        "city": "Hajrah",
+        "coordinates": {
+            "latitude": 20.35,
+            "longitude": 40.23
+        }
+    },
+    {
+        "city": "Hafr Al-Batin",
+        "coordinates": {
+            "latitude": 28.32,
+            "longitude": 45.96
+        }
+    },
+    {
+        "city": "Habaala",
+        "coordinates": {
+            "latitude": 18.06,
+            "longitude": 42.36
+        }
+    },
+    {
+        "city": "Ha'il",
+        "coordinates": {
+            "latitude": 27.52,
+            "longitude": 41.69
+        }
+    },
+    {
+        "city": "Ghawiyah",
+        "coordinates": {
+            "latitude": 21.36,
+            "longitude": 40.35
+        }
+    },
+    {
+        "city": "Gerrha",
+        "coordinates": {
+            "latitude": 25.38,
+            "longitude": 49.72
+        }
+    },
+    {
+        "city": "Gatgat",
+        "coordinates": {
+            "latitude": 24.70,
+            "longitude": 46.33
+        }
+    },
+    {
+        "city": "Farasan",
+        "coordinates": {
+            "latitude": 16.70,
+            "longitude": 42.10
+        }
+    },
+    {
+        "city": "Dumat Al-Jandal",
+        "coordinates": {
+            "latitude": 29.80,
+            "longitude": 39.86
+        }
+    },
+    {
+        "city": "Duba",
+        "coordinates": {
+            "latitude": 27.35,
+            "longitude": 35.69
+        }
+    },
+    {
+        "city": "Diriyah",
+        "coordinates": {
+            "latitude": 24.73,
+            "longitude": 46.57
+        }
+    },
+    {
+        "city": "Dhurma",
+        "coordinates": {
+            "latitude": 24.81,
+            "longitude": 46.16
+        }
+    },
+    {
+        "city": "Dhahran",
+        "coordinates": {
+            "latitude": 26.32,
+            "longitude": 50.15
+        }
+    },
+    {
+        "city": "Dawadmi",
+        "coordinates": {
+            "latitude": 24.50,
+            "longitude": 44.41
+        }
+    },
+    {
+        "city": "Dammam",
+        "coordinates": {
+            "latitude": 26.43,
+            "longitude": 50.10
+        }
+    },
+    {
+        "city": "Dahaban",
+        "coordinates": {
+            "latitude": 21.90,
+            "longitude": 39.14
+        }
+    },
+    {
+        "city": "Buraydah",
+        "coordinates": {
+            "latitude": 26.33,
+            "longitude": 43.96
+        }
+    },
+    {
+        "city": "Bisha",
+        "coordinates": {
+            "latitude": 20.0,
+            "longitude": 42.60
+        }
+    },
+    {
+        "city": "Bareq",
+        "coordinates": {
+            "latitude": 19.12,
+            "longitude": 41.93
+        }
+    },
+    {
+        "city": "Baljurashi",
+        "coordinates": {
+            "latitude": 19.86,
+            "longitude": 41.61
+        }
+    },
+    {
+        "city": "Badr",
+        "coordinates": {
+            "latitude": 23.08,
+            "longitude": 38.80
+        }
+    },
+    {
+        "city": "Az Zaimah",
+        "coordinates": {
+            "latitude": 21.65,
+            "longitude": 40.13
+        }
+    },
+    {
+        "city": "As Sulayyil",
+        "coordinates": {
+            "latitude": 20.47,
+            "longitude": 45.58
+        }
+    },
+    {
+        "city": "Arar",
+        "coordinates": {
+            "latitude": 30.98,
+            "longitude": 41.02
+        }
+    },
+    {
+        "city": "Ar Rass",
+        "coordinates": {
+            "latitude": 25.88,
+            "longitude": 43.50
+        }
+    },
+    {
+        "city": "Al-Saih",
+        "coordinates": {
+            "latitude": 24.18,
+            "longitude": 47.30
+        }
+    },
+    {
+        "city": "Al-Oyoon",
+        "coordinates": {
+            "latitude": 25.5,
+            "longitude": 49.6
+        }
+    },
+    {
+        "city": "Al-Omran",
+        "coordinates": {
+            "latitude": 25.4,
+            "longitude": 49.7
+        }
+    },
+    {
+        "city": "Al-Namas",
+        "coordinates": {
+            "latitude": 19.11,
+            "longitude": 42.17
+        }
+    },
+    {
+        "city": "Al-Khutt",
+        "coordinates": {
+            "latitude": 27.87,
+            "longitude": 41.74
+        }
+    },
+    {
+        "city": "Al-Hareeq",
+        "coordinates": {
+            "latitude": 23.62,
+            "longitude": 46.51
+        }
+    },
+    {
+        "city": "Al-Gwei'iyyah",
+        "coordinates": {
+            "latitude": 24.07,
+            "longitude": 45.28
+        }
+    },
+    {
+        "city": "Al-Abwa",
+        "coordinates": {
+            "latitude": 23.11,
+            "longitude": 39.07
+        }
+    },
+    {
+        "city": "Al-'Ula",
+        "coordinates": {
+            "latitude": 26.62,
+            "longitude": 37.92
+        }
+    },
+    {
+        "city": "Al Wajh",
+        "coordinates": {
+            "latitude": 26.24,
+            "longitude": 36.47
+        }
+    },
+    {
+        "city": "Al Qunfudhah",
+        "coordinates": {
+            "latitude": 19.18,
+            "longitude": 41.20
+        }
+    },
+    {
+        "city": "Al Qadeeh",
+        "coordinates": {
+            "latitude": 26.5,
+            "longitude": 50.11
+        }
+    },
+    {
+        "city": "Al Mikhwah",
+        "coordinates": {
+            "latitude": 19.73,
+            "longitude": 41.32
+        }
+    },
+    {
+        "city": "Al Mawain",
+        "coordinates": {
+            "latitude": 18.65,
+            "longitude": 42.43
+        }
+    },
+    {
+        "city": "Al Majma'ah",
+        "coordinates": {
+            "latitude": 25.88,
+            "longitude": 45.37
+        }
+    },
+    {
+        "city": "Al Lith",
+        "coordinates": {
+            "latitude": 20.14,
+            "longitude": 40.28
+        }
+    },
+    {
+        "city": "Al Jafr",
+        "coordinates": {
+            "latitude": 25.38,
+            "longitude": 49.72
+        }
+    },
+    {
+        "city": "Al Bukayriyah",
+        "coordinates": {
+            "latitude": 26.16,
+            "longitude": 43.66
+        }
+    },
+    {
+        "city": "Al Bahah",
+        "coordinates": {
+            "latitude": 20.01,
+            "longitude": 41.47
+        }
+    },
+    {
+        "city": "Al Artaweeiyah",
+        "coordinates": {
+            "latitude": 26.5,
+            "longitude": 45.35
+        }
+    },
+    {
+        "city": "Ad-Dilam",
+        "coordinates": {
+            "latitude": 23.83,
+            "longitude": 46.90
+        }
+    },
+    {
+        "city": "Abha",
+        "coordinates": {
+            "latitude": 18.25,
+            "longitude": 42.51
+        }
+    }
+]
